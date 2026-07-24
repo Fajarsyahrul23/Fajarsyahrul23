@@ -1,0 +1,152 @@
+/* ============================================================
+   input.css — Custom style enhancements
+   Complements the Tailwind CDN stylesheet with advanced styles,
+   animations, and component layouts.
+   ============================================================ */
+
+/* Global Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4f46e5;
+}
+
+/* Focus Ring Override */
+*:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* --- Scroll-Reveal Base States --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Dynamic Project Transitions (Fade + Slide) */
+.project-card-transition {
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card-enter {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+}
+
+.project-card-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Custom Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.dark .glass-panel {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Timeline Custom Styles */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: -9px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6366f1;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.dark .timeline-item::after {
+  border-color: #111827;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.3);
+}
+
+.timeline-item:hover::after {
+  background: #06b6d4;
+  transform: scale(1.2);
+}
+
+/* Left-sided timelines for responsive layouts */
+@media (min-width: 768px) {
+  .timeline-left::after {
+    left: auto;
+    right: -9px;
+  }
+}
+
+/* Animation delays helper */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Custom Gradient borders */
+.gradient-border-hover {
+  position: relative;
+  border-radius: 1rem;
+  background: linear-gradient(to bottom right, #e2e8f0, #cbd5e1);
+  padding: 1px;
+  transition: all 0.3s ease;
+}
+.dark .gradient-border-hover {
+  background: linear-gradient(to bottom right, #374151, #1f2937);
+}
+.gradient-border-hover:hover {
+  background: linear-gradient(to bottom right, #6366f1, #8b5cf6, #06b6d4);
+}
+.gradient-border-inner {
+  background: #ffffff;
+  border-radius: 0.95rem;
+}
+.dark .gradient-border-inner {
+  background: #1f2937;
+}
+
+/* Blob morph animation keyframes (extra details) */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+.pulse-glow {
+  animation: pulseGlow 6s ease-in-out infinite;
+}
