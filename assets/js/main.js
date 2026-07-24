@@ -18,7 +18,7 @@ const projectsData = [
     shortDesc: 'A web-based application to support the employee evacuation process during emergencies by providing access to department-based manifest documents.',
     fullDesc: 'Employee Manifest System is a web-based application designed to support the evacuation process for employees during emergencies, such as fires or other critical situations. The system features PIN-based authentication for each department to access manifest documents containing information about employees, work areas, assembly points, and attendance status based on fingerprint data. Administrators can manage PIN access for each department, while department users are limited to previewing, downloading, and printing manifest documents according to their assigned access rights.',
     tech: ['Laravel', 'Tailwind CSS', 'JavaScript', 'Web APIs', 'DomPdf'],
-    image: 'assets/images/project/website/manifest.png',
+    image: 'assets/images/project/website/Manifest.png',
     role: 'Full Stack Developer',
     year: '2026',
     features: [
@@ -943,13 +943,12 @@ if (contactForm) {
 // 14. TYPED TEXT EFFECT — HERO ROLES
 // ──────────────────────────────────────────────
 const roles = ['Full Stack Web Developer', 'Data Analyst', 'IT Programmer', 'IT Support'];
-const typedEl = document.getElementById('typed-role');
-let roleIdx = 0;
-let charIdx = 0;
-let isDeleting = false;
+const typedEl    = document.getElementById('typed-role');
+let roleIdx      = 0;
+let charIdx      = 0;
+let isDeleting   = false;
 
 function type() {
-  if (!typedEl) return;
   const current = roles[roleIdx];
 
   if (isDeleting) {
@@ -966,15 +965,15 @@ function type() {
 
   if (isDeleting && charIdx < 0) {
     isDeleting = false;
-    roleIdx = (roleIdx + 1) % roles.length;
-    charIdx = 0;
+    roleIdx    = (roleIdx + 1) % roles.length;
+    charIdx    = 0;
     setTimeout(type, 400);
     return;
   }
 
   setTimeout(type, isDeleting ? 60 : 90);
 }
-
+type();
 
 // ──────────────────────────────────────────────
 // 15. INITIALIZATION
