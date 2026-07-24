@@ -146,7 +146,7 @@ const projectsData = [
     shortDesc: 'An interactive dashboard for monitoring the implementation of employee training, participation rates, and competency development progress.',
     fullDesc: 'Employee Training Dashboard is an interactive dashboard developed using Power BI to assist the Human Resources team in monitoring the implementation of employee training programs. The dashboard presents information regarding the number of training participants, attendance rates, training completion status, as well as training distribution based on department and period. Data is processed using SQL Query and Power Query to produce accurate visualizations that facilitate the evaluation and decision-making processes related to employee competency development.',
     tech: ['Power BI', 'Excel', 'Data Modeling', 'Data Visualization'], 
-    image: 'assets/images/project/pbi/training.png',
+    image: 'assets/images/project/pbi/Training.png',
     role: 'Principal Data Analyst',
     year: '2026',
     features: [
@@ -169,7 +169,7 @@ const projectsData = [
     shortDesc: 'An interactive dashboard for monitoring sales performance, product distribution, and warehouse activities to support decision-making.',
     fullDesc: 'The Sales Dashboard is an interactive dashboard developed using Power BI to assist in monitoring sales and product distribution. It presents information on sales performance, product shipments, and warehouse operational data sourced from SQL Server. The data is processed using SQL queries and Power Query before being visualized in interactive reports, thereby facilitating analysis and decision-making by management.',
     tech: ['Power BI', 'SQL Server', 'Data Modeling', 'Data Visualization','SQL Query'], 
-    image: 'assets/images/project/pbi/sales.png',
+    image: 'assets/images/project/pbi/Sales.png',
     role: 'Principal Data Analyst',
     year: '2026',
     features: [
@@ -238,7 +238,7 @@ const projectsData = [
     shortDesc: 'A web-based information portal to promote the Plered ceramics industry and support services for submitting ceramic export documentation.',
     fullDesc: 'The Plered Ceramic Information Portal is a web-based application developed to serve as an information and promotional platform for the Plered ceramic industry. The website provides information on ceramic craft centers, product galleries, and the latest news, as well as an online service for submitting ceramic export documentation. The system is designed to facilitate access to information and digital administrative services for the public, business operators, and relevant agencies.',
     tech: ['codeigniter', 'bootstrap CSS', 'JavaScript', 'Web APIs', 'DomPdf', 'MySQL'],
-    image: 'assets/images/project/website/uptd.png',
+    image: 'assets/images/project/website/Uptd.png',
     role: 'Full Stack Developer',
     year: '2025',
     features: [
